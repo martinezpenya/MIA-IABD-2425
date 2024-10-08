@@ -2,7 +2,7 @@
 
 # Modelos de Inteligencia Artificial
 
-## Curso de especialización IA-BD (2023-2024)
+## Curso de especialización IA-BD (2024-2025)
 
 [README_ES.md (contenido en Español)](README_ES.md) :es:
 

@@ -13,8 +13,13 @@
   - [UD01_4_ES](https://rawcdn.githack.com/martinezpenya/MIA-IABD-2425/master/_slides/UD01/UD01_4_ES.html)
   - [UD01_5_ES](https://rawcdn.githack.com/martinezpenya/MIA-IABD-2425/master/_slides/UD01/UD01_5_ES.html)
 - Práctica:
-  - [UD01Practica_ES (Enunciado de la práctica)](https://raw.githubusercontent.com/martinezpenya/MIA-IABD-2324/master/UD01/UD01Practica_ES.pdf)
-  - [UD01RobocodeTankRoyale_ES](https://raw.githubusercontent.com/martinezpenya/MIA-IABD-2324/master/UD01/UD01RobocodeTankRoyale_ES.pdf)
+  - [UD01Practica_ES (Enunciado de la práctica)](UD01/UD01Practica_ES.pdf)
+  - [UD01RobocodeTankRoyale_ES](UD01/UD01RobocodeTankRoyale_ES.pdf)
+- Talleres:
+  - [UD01_T01_IDE_ES.pdf)](UD01/UD01_T01_IDE_ES.pdf)
+  - [UD01_T02_GitHubVsCode_ES.pdf)](UD01/UD01_T02_GitHubVsCode_ES.pdf)
+  - [UD01_T03_Markdown.pdf)](UD01/UD01_T03_Markdown.pdf)
+
 
 
 ## UD02: Sistemas Expertos

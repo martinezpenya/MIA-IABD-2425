@@ -49,7 +49,7 @@ typora-copy-images-to:${filename}/../assets
 
 # Robocode con Maven
 
-Desde hace "relativamente" poco, robocode tanyroyale está disponible como artefacto del repositorio de maven, si estas familiarizado con el uso de maven puede simplificar bastante el trabajo y actualizaciones de dependencias, te dejo el enlace por si quieres investigar por tu cuenta, ya que escapa del objetivo de esta asignatura: https://central.sonatype.com/search?q=g:dev.robocode.tankroyale&smo=true
+Desde hace "relativamente" poco, robocode tankroyale está disponible como artefacto del repositorio de maven, si estas familiarizado con el uso de maven puede simplificar bastante el trabajo y actualizaciones de dependencias, te dejo el enlace por si quieres investigar por tu cuenta, ya que escapa del objetivo de esta asignatura: https://central.sonatype.com/search?q=g:dev.robocode.tankroyale&smo=true
 
 # Mi primer Bot
 
