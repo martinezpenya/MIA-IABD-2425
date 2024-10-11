@@ -1,14 +1,14 @@
 ---
-title: Taller 02: Como usar el VSCode integrado en GitHub
+title: 'Taller 02: Como usar el VSCode integrado en GitHub'
 language: ES
 author: David Martínez Peña [www.martinezpenya.es]
 subject: Programación
 keywords: [PRG, 2024, Programacion, Java]
 IES: IES Eduardo Primo Marqués (Carlet) [www.ieseduardoprimo.es]
 header: ${title} - ${subject} (ver. ${today}) 
-footer:${currentFileName}.pdf - ${author} - ${IES} - ${pageNo}/${pageCount}
-typora-root-url:${filename}/../
-typora-copy-images-to:${filenam_manual_supervivenciae}/../assets
+footer: ${currentFileName}.pdf - ${author} - ${IES} - ${pageNo}/${pageCount}
+typora-root-url: ${filename}/../
+typora-copy-images-to: ${filenam_manual_supervivenciae}/../assets
 ---
 [toc]
 # `VsCode` integrado en `GitHub`
