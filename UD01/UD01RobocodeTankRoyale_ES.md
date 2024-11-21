@@ -418,7 +418,7 @@ Notarás que tanto el primero como este último tipo de movimientos tienen otro 
 Para hacer que tu robot se acerque a tu enemigo, simplemente modifica el código para que se gire ligeramente hacia su enemigo, así:
 
 ```java
-setTurnLeft((lastScannedBearing + 90 - (15 * moveDirection)));
+setTurnLeft(lastScannedBearing + (90 - (15 * moveDirection)));
 ```
 
 15 es un factor en grados que puedes modificar y ajustar. Prueba!
@@ -479,7 +479,7 @@ Lo siguiente que debemos hacer es manejar el evento, que se puede hacer así:
         if (e.getCondition().getName().equals("TooCloseToWalls")) {
             // switch directions and move away
             moveDirection *= -1;
-            Forward(100 * moveDirection);
+            forward(100 * moveDirection);
         }
     }
 ```
@@ -510,7 +510,7 @@ public void onCustomEvent(CustomEvent e) {
 
 **Manejo de los dos modos**
 
-Hay dos últimos problemas que debemos resolver. En primer lugar, tenemos un método `doMove()` donde colocamos todo nuestro código de movimiento normal. Si estamos tratando de alejarnos de una pared, no queremos que se llame a nuestro código de movimiento normal, creando (una vez más) el "sacudida de la muerte". En segundo lugar, queremos volver eventualmente al movimiento "normal", por lo que eventualmente deberíamos tener el "tiempo de espera" de la variable `tooCloseToWall`.
+Hay dos últimos problemas que debemos resolver. En primer lugar, tenemos un método `doMove()` donde colocamos todo nuestro código de movimiento normal. Si estamos tratando de alejarnos de una pared, no queremos que se llame a nuestro código de movimiento normal, creando (una vez más) la "sacudida de la muerte". En segundo lugar, queremos volver eventualmente al movimiento "normal", por lo que eventualmente deberíamos tener el "tiempo de espera" de la variable `tooCloseToWall`.
 
 Podemos resolver ambos problemas con la siguiente implementación de `doMove()`:
 
@@ -534,7 +534,7 @@ Con todo el código anterior evitamos chocar contra las paredes. Observa cómo s
 
 ### Bot multimodo
 
-Además de los colores que elijas, la mayor parte de la personalidad de tu robot está en su código de movimiento. Por otra parte, situaciones diferentes requieren tácticas diferentes. Usando el ejemplo de evitar paredes, es posible que desees codificar tu bot para que cambie los "modos" según ciertos criterios. Podrias pensar en algo como esto:
+Además de los colores que elijas, la mayor parte de la personalidad de tu robot está en su código de movimiento. Por otra parte, situaciones diferentes requieren tácticas diferentes. Usando el ejemplo de evitar paredes, es posible que desees codificar tu bot para que cambie los "modos" según ciertos criterios. Podrías pensar en algo como esto:
 
 ```java
 public class MultiModeBot extends Bot {
@@ -587,7 +587,7 @@ Los detalles se dejan (como siempre) como ejercicio para el alumnado.
 
 ### Fórmula de cálculo de potencia de fuego
 
-Otro aspecto importante al disparar es calcular la potencia de fuego de tu bala. La documentación del método fire() explica que puedes disparar una bala en el rango de `0.1` a `3.0`. Como probablemente ya habrás concluido, es una buena idea disparar balas de baja potencia cuando tu enemigo está lejos y balas de alta resistencia cuando está cerca.
+Otro aspecto importante al disparar es calcular la potencia de fuego de tu bala. La documentación del método `fire()` explica que puedes disparar una bala en el rango de `0.1` a `3.0`. Como probablemente ya habrás concluido, es una buena idea disparar balas de baja potencia cuando tu enemigo está lejos y balas de alta resistencia cuando está cerca.
 
 ```java
 public void smartFire(double distance){
@@ -610,7 +610,7 @@ setFire(400/distanceTo(e.getX(), e.getY()));
 Con esta fórmula, a medida que aumenta la distancia del enemigo, la potencia de fuego disminuye. Asimismo, a medida que el enemigo se acerca, la potencia de fuego aumenta. Los valores superiores a 3 se reducen a 3, por lo que nunca dispararemos una bala mayor que 3, pero probablemente deberíamos reducir el valor de todos modos (solo para estar seguros) de esta manera:
 
 ```java
-setFire(Math.max(500/distanceTo(e.getX(), e.getY()), 3));
+setFire(Math.min(500/distanceTo(e.getX(), e.getY()), 3));
 ```
 
 ### Evitar disparos prematuros
