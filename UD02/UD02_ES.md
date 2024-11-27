@@ -253,52 +253,6 @@ Lo que diferencia a este tipo de sistemas de un sistema tradicional de recuperac
 
 Veamos ahora los tipos de sistemas expertos que se desarrollaron y cómo resolvieron las tareas clave que permitieron su funcionamiento.
 
-### Tipos de sistemas expertos.
-
-Existen, principalmente, tres tipos de sistemas expertos:
-
-- **Basados en reglas previamente establecidas**: También conocidos como RBR (Rule Based Reasoning). Trabajan mediante la aplicación de reglas, comparación de resultados y aplicación de las nuevas reglas basadas en la situación modificada. Esta aplicación de reglas heurísticas se apoya principalmente en lo que se conoce como lógica difusa, para su evaluación y aplicación.
-
-- **Basados en casos**: También conocidos como CBR (Case Based Reasoning). Se basan en el proceso de solucionar nuevos problemas según las soluciones de problemas anteriores. Este tipo de razonamiento se adapta al nuevo problema.
-
-- **Basados en redes bayesianas**: Son los conocidos sistemas probabilísticos, que constituyen una herramienta bastante útil en la estimación de probabilidades de resultados en función de nuevas evidencias. Como su nombre indica, se utiliza el cálculo de la probabilidad según el Teorema de Bayes. 
-
-  En esencia, consiste en un gráfico que representa un conjunto de variables conocidas y las relaciones de dependencia entre ellas a fin de inferir, es decir, estimar la probabilidad, de las variables no conocidas. Dadas sus características, este modelo resulta idóneo para la clasificación, la predicción o el diagnóstico.
-
-  Por ejemplo, un sistema de riego automático que tuviese que decidir si regar o no en función de la probabilidad de que llueva o no, seguiría este esquema (que puedes encontrar en un [artículo](https://es.wikipedia.org/wiki/Red_bayesiana) más extenso sobre el tema).
-
-> ## Te recomendamos que juegues con diferentes tipos de sistemas basados en reglas que puedes encontrar en esta [web](https://visiruleexamples.com/vregs.html).
-
-### Representación del conocimiento.
-
-Las estructuras básicas de representación del conocimiento son:
-
-- **Reglas de producción**: El resultado que arroja un sistema experto se basa en la aplicación de reglas sobre los objetos y hechos presentes. Se trata de estructuras condicionales que relacionan a través de la lógica la información de una premisa o antecedente con la información contenida en la parte de conclusión o consecuencia y que suele traducirse en una acción. Tanto la premisa como la conclusión, hacen referencia a hechos mencionados en la base de conocimientos.
-
-  El esquema de una regla de producción sería éste: 
-
-  `SI premisa 1 Y premisa 2 ... Y premisa n ENTONCES conclusión/acción `
-
-  Por ejemplo:
-
-  `SI el reloj funciona Y el reloj marca las 7:00 ENTONCES es hora de levantarse/suena el despertador`
-
-  Cuando se aplica una regla sobre unos hechos, se dice que la regla "dispara" y esto provoca la inserción de un nuevo hecho en la base de hechos.
-
-- **Lógica proposicional**: Es similar a las reglas de producción. Separa los elementos que componen la base de conocimiento de aquellos que controlan la operación del sistema.
-
-- **Redes semánticas**: Representan el conocimiento en formas de redes o grafos. Cada nodo de la red representa un concepto u objeto y los lazos que los interconectan describen reacciones entre ellos.
-
-  ![image-20230814191527064](/assets/RedesSemanticas.png)
-
-- **Marcos**: Son estructuras de datos donde se almacena información concreta de un cierto concepto y la información relacional correspondiente. Asocian propiedades a los nodos de las redes semánticas, que representan, a su vez, los objetos o conceptos. Dichas propiedades son descritas en términos de atributos y valores asociados.
-- **Objetos**: Se utilizan, especialmente, en entornos de programación orientada a objetos y actúan como entidades independientes de forma que el control del sistema se materializa a través del envío de mensajes del sistema a los objetos y entre ellos mismos.
-
-- **Representaciones múltiples**: Son de uso frecuente y combinan dos o más formas de representación entre éstas:
-  - **Representación declarativa**: incluye las reglas, el cálculo de predicados y las redes semánticas. El conocimiento queda estructurado en fragmentos independientes entre sí que se combinan mediante un mecanismo general de razonamiento y deducción.
-  - **Representación procedimental**: refleja explícitamente las relaciones entre los fragmentos de conocimiento, y éstas son difíciles de modificar
-  - **Representación mixta**: es una combinación de las anteriores. Usa objetos y marcos.
-
 ### Mecanismos de razonamiento.
 
 Los principales mecanismos o modos de razonamiento son:
@@ -424,7 +378,7 @@ Para obtener conclusiones, utilizaremos los diferentes tipos de reglas y estrate
 
 ## Funciones de pertenencia
 
-<img src="assets/img_11.png" style="zoom:50%;" />
+<img src="/assets/membership_fuctions-1732749975918-1.png" style="zoom:125%;" />
 
 * Las más utilizadas son las **funciones trapezoidales** y las **funciones triangulares**.
 * Las sinusoidales son útiles para representar **periodos**.
@@ -469,7 +423,7 @@ Utilizaremos funciones triangulares para representar las variables de entrada y 
 
 * Calidad del servicio: **9.8**
 * Calidad de la comida: **6.5**
-* Soborno: **20,24%**
+* propina: **19,24%**
 
 <img src="/assets/plot_tipping_problem_newapi_5.png" alt="ajuste correcto" style="zoom:50%;" />
 

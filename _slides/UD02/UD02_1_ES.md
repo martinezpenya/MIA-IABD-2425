@@ -40,7 +40,7 @@ section {
 ![h:300 center](../../UD02/assets/cover.png)
 # **UD02: Sistemas Basados en Reglas**
 #### Modelos de Inteligencia Artificial
-###### version: 2024-11-21
+###### version: 2024-11-27
 ___
 <!-- footer: d.martinezpena@edu.gva.es -->
 <!-- header: Modelos de Inteligencia Artificial 24-25 (UD01_1)-->
@@ -222,35 +222,6 @@ ___
 * Un sistema experto debe ser capaz de generar información no explícita, razonando con los elementos que se le dan.
 * Un sistema experto puede actuar como un intermediario inteligente que guía y apoya el trabajo del usuario final.
 ___
-## Tipos de sistemas expertos.
-* **Basados en reglas previamente establecidas** <!-- También conocidos como RBR (Rule Based Reasoning). Trabajan mediante la aplicación de reglas, comparación de resultados y aplicación de las nuevas reglas basadas en la situación modificada. Esta aplicación de reglas heurísticas se apoya principalmente en lo que se conoce como lógica difusa, para su evaluación y aplicación.-->
-* **Basados en casos** <!-- También conocidos como CBR (Case Based Reasoning). Se basan en el proceso de solucionar nuevos problemas según las soluciones de problemas anteriores. Este tipo de razonamiento se adapta al nuevo problema.-->
-* [**Basados en redes bayesianas**](https://es.wikipedia.org/wiki/Red_bayesiana)<!--Son los conocidos sistemas probabilísticos, que constituyen una herramienta bastante útil en la estimación de probabilidades de resultados en función de nuevas evidencias. Como su nombre indica, se utiliza el cálculo de la probabilidad según el Teorema de Bayes. En esencia, consiste en un gráfico que representa un conjunto de variables conocidas y las relaciones de dependencia entre ellas a fin de inferir, es decir, estimar la probabilidad, de las variables no conocidas. Dadas sus características, este modelo resulta idóneo para la clasificación, la predicción o el diagnóstico. Por ejemplo, un sistema de riego automático que tuviese que decidir si regar o no en función de la probabilidad de que llueva o no, seguiría este esquema (que puedes encontrar en un [artículo](https://es.wikipedia.org/wiki/Red_bayesiana) más extenso sobre el tema).-->
-* [**Lógica difusa**](https://es.wikipedia.org/wiki/Lógica_difusa)<!-- Si quieres profundizar más en el tema de la lógica difusa o borrosa que permite la toma de decisiones en algunos sistemas expertos, puedes leer sobre ello en este [artículo de la Wikipedia]-->
-* Diferentes tipos de sistemas basados en reglas: [web](https://visiruleexamples.com/vregs.html).
-___
-<style scoped>
-section {
-  @extend .markdown-body;
-  font-size: 27px;
-  justify-content: top;
- }
-</style>
-## Representación del conocimiento.
-* **Reglas de producción**<!--El resultado que arroja un sistema experto se basa en la aplicación de reglas sobre los objetos y hechos presentes. Se trata de estructuras condicionales que relacionan a través de la lógica la información de una premisa o antecedente con la información contenida en la parte de conclusión o consecuencia y que suele traducirse en una acción. Tanto la premisa como la conclusión, hacen referencia a hechos mencionados en la base de conocimientos.   Cuando se aplica una regla sobre unos hechos, se dice que la regla "dispara" y esto provoca la inserción de un nuevo hecho en la base de hechos.-->
-* **Lógica proposicional**<!--Es similar a las reglas de producción. Separa los elementos que componen la base de conocimiento de aquellos que controlan la operación del sistema.-->
-* **Redes semánticas**<!-- Representan el conocimiento en formas de redes o grafos. Cada nodo de la red representa un concepto u objeto y los lazos que los interconectan describen reacciones entre ellos.-->
-
-  ![bg right:40% fit](../../UD02/assets/RedesSemanticas.png)
-
-- **Marcos**<!-- Son estructuras de datos donde se almacena información concreta de un cierto concepto y la información relacional correspondiente. Asocian propiedades a los nodos de las redes semánticas, que representan, a su vez, los objetos o conceptos. Dichas propiedades son descritas en términos de atributos y valores asociados.-->
-- **Objetos**<!-- Se utilizan, especialmente, en entornos de programación orientada a objetos y actúan como entidades independientes de forma que el control del sistema se materializa a través del envío de mensajes del sistema a los objetos y entre ellos mismos.-->
-
-- **Representaciones múltiples**<!--: Son de uso frecuente y combinan dos o más formas de representación entre éstas:-->
-  - **Representación declarativa**<!--: incluye las reglas, el cálculo de predicados y las redes semánticas. El conocimiento queda estructurado en fragmentos independientes entre sí que se combinan mediante un mecanismo general de razonamiento y deducción.-->
-  - **Representación procedimental**<!--: refleja explícitamente las relaciones entre los fragmentos de conocimiento, y éstas son difíciles de modificar-->
-  - **Representación mixta**<!--: es una combinación de las anteriores. Usa objetos y marcos.-->
-___
 ## Mecanismos de razonamiento.
 * **Encadenamiento hacia delante**: se parte de hechos para llegar a resultados.
 * **Encadenamiento hacia atrás**: se parte de los resultados y se trata de encontrar o volver a los hechos.
@@ -265,75 +236,6 @@ ___
 * [Modus Tollens](https://es.wikipedia.org/wiki/Modus_tollendo_tollens) "Si *P* implica *Q*, y *Q* no es cierto, entonces *P* no es cierto"
 
 Así como ver este [vídeo](https://youtu.be/MLe9flR4PsA) corto en el que se hace un planteamiento sencillo de los conceptos.
-___
-<style scoped>
-section {
-  @extend .markdown-body;
-  font-size: 27px;
-  justify-content: top;
- }
-</style>
-# 4.Representación y simulación de comportamientos básicos
-* Ventajas:
-  * se programan de manera rápida (si...entonces)
-  * manejan gran cantidad de información simultaneamente
-  * son escalables, solo debemos alimentarlos con más información.
-  * actuan de manera transparente y pedagógica
-* Desventajas:
-  * por mucha info que introduzcamos, imposible abarcar todo
-  * no son creativos o imaginativos
-
-* Aprenderemos más usando Experta en la parte práctica.
-___
-# 5.Estrategias de control de un sistema experto
-
-* Las dos estrategias de control más empleadas:
-  * **razonamiento hacia adelante**
-  * **razonamiento hacia atrás**
-
-* **LISP** normalmente utilizará razonamiento hacia adelante
-* **PROLOG** empleará la estrategia de razonamiento hacia atrás.
-___
-#### razonamiento hacia adelante:
-```lisp
-SI (el paciente tiene fiebre) Y (ha perdido el olfato)
-	ENTONCES hacer prueba PCR (Polymerase Chain Reaction)
-```
-```lisp
- SI (llueve)
- 	ENTONCES (usar paraguas)
- ```
-___
-<style scoped>
-section {
-  @extend .markdown-body;
-  font-size: 27px;
-  justify-content: top;
- }
-</style>
-#### encadenamiento hacia atrás:
-Se parte del estado de llegada y se trata de llegar a él encadenando objetivos. Se parte de un resultado que se considerará cierto en caso de cumplirse una serie de condiciones.
-determinar qué animal caza ratones y bebe leche. La base de reglas de la que se dispone es la siguiente:
-```lisp
-SI Animal caza ratones y bebe leche
-	ENTONCES Animal es un gato
-SI Animal pía y vuela
-	ENTONCES Animal es un pájaro
-SI Animal es un gato
-	ENTONCES Animal tiene pelo
-SI Animal es un pájaro
-	ENTONCES Animal es tiene plumas
-```
-El encadenamiento hacia atrás comienza con una lista de objetivos o una hipótesis y trabaja desde el consecuente hacia el antecedente con el fin de verificar si los datos apoyan las consecuencias.
-___
-
-## Sistemes híbrids Regles/Dades (I)
-
-- Dos enfocaments:
-  - Deducció de regles a partir de dades. - Facilita la **interpretació** del raonament.
-  - Integració de regles definides per l'usuari i Aprenentatge Automàtic. - Permet definir unes regles que es poden **millorar** amb l'aprenentatge automàtic.
-
-![bg right:40% fit](../images/1%20wkeYZMEmA1W-lAbUTLzPrw.webp)
 
 ---
 
@@ -352,25 +254,19 @@ ___
 
 ---
 
-<!--
-_clase: plomo
--->
-
-<estilo con ámbito>
-h1, h2, h3, h4, h5, h6, p {
-  peso de la fuente: 800;
-  sombra de texto:
-    0px 0px 3px #FFFFFF;
-}
-</estilo>
-
 ## Sistemas de razonamiento impreciso
 
-![opacidad de fondo](../images/1280px-Fuzzy_logic_temperature_en.svg.png)
+![bg opacity](../../UD02/assets/1280px-Fuzzy_logic_temperature_en.svg.png)
 
 ---
 
-<style scoped>sección { tamaño de fuente: 31px; }</style>
+<style scoped>
+section {
+  @extend .markdown-body;
+  font-size: 32px;
+  justify-content: top;
+ }
+</style>
 
 ### Definición
 
@@ -386,7 +282,13 @@ h1, h2, h3, h4, h5, h6, p {
 
 ---
 
-<style scoped>sección { tamaño de fuente: 32px; }</style>
+<style scoped>
+section {
+  @extend .markdown-body;
+  font-size: 32px;
+  justify-content: top;
+ }
+</style>
 
 ### Lógica difusa (I)
 
@@ -401,45 +303,61 @@ h1, h2, h3, h4, h5, h6, p {
 
 ---
 
-![fondo ajustado](../images/1%20QgzU5OF0uGucga5d1nzdig.webp)
+![bg fit](../../UD02/assets/1%20QgzU5OF0uGucga5d1nzdig.webp)
 
 ---
 
-<style scoped>sección { tamaño de fuente: 32px; }</style>
+<style scoped>
+section {
+  @extend .markdown-body;
+  font-size: 32px;
+  justify-content: top;
+ }
+</style>
 
 ### Lógica difusa (II)
 
 - La lógica difusa facilita la **representación del conocimiento humano**.
   - Los humanos no razonamos en términos binarios.
   - Los humanos no tenemos un conocimiento preciso ni completo.
-- Conceptos como $$húmedo$$ o $$frío$$ son difíciles de definir con precisión.
+- Conceptos como $húmedo$ o $frio$ son difíciles de definir con precisión.
   - La lógica difusa nos permite definirlos con **funciones de relevancia**.
   - El poder trabajar con estos conceptos facilita la creación de dispositivos como secadores o termostatos.
     - _"Si la temperatura es fría, entonces enciende la calefacción"_
 
 ---
 
-<style scoped>sección { tamaño de fuente: 33,7 px; }</style>
-
+<style scoped>
+section {
+  @extend .markdown-body;
+  font-size: 32px;
+  justify-content: top;
+ }
+</style>
 ### Conceptos básicos (I)
 
 - **Variable lingüística**: Variable que puede tomar valores lingüísticos.
   - Ejemplos: $Temperatura$
 - **Valores lingüísticos**: Valores que puede tomar una variable lingüística.
-  - Ejemplo: $Frío, Calor$
+  - Ejemplo: $Frio, Calor$
 - **Función de pertenencia**: Función que asigna a cada valor de una variable lingüística un grado de pertenencia a un valor lingüístico.
   - Ejemplo: $Temperatura = 27^oC \rightarrow Calor = 0,8,\; Combustible\,Calor = 0,2$
 
 ---
 
-<style scoped>sección { tamaño de fuente: 32.9px; }</style>
-
+<style scoped>
+section {
+  @extend .markdown-body;
+  font-size: 32px;
+  justify-content: top;
+ }
+</style>
 ### Conceptos básicos (II)
 
 - **Regla difusa**: Regla que utiliza valores difusos.
   - Ejemplo: _"Si la temperatura es **fría**, entonces **calefacción alta**"_
 - **Función de agregación**: Función que combina los valores difusos de las reglas para deducir la conclusión final.
-  - Exemple: $Calor = 0.8, Humit = 0.7 \rightarrow Sensacio\:desagradable = 0.8$
+  - Exemple: $Calor = 0.8, Humedad = 0.7 \rightarrow Sensacion\:desagradable = 0.8$
 - **Sistema de razonamiento impreciso**:
   - Sistema basado en reglas que utiliza la lógica difusa.
   - Ejemplo: Sistema de control de temperatura de una casa.
@@ -453,12 +371,17 @@ h1, h2, h3, h4, h5, h6, p {
   - Pasamos de valores precisos a valores difusos.
   - Utiliza las **funciones de pertenencia**.
     - Asigne a cada valor de entrada un grado de relevancia para cada **variable de idioma**
-    - $$27^oC \rightarrow Calor = 0.8, Molta\:calor = 0.2$$
+    - $$27^oC \rightarrow Calor = 0.8, Mucha\:calor = 0.2$$
 
 ---
 
-<style scoped>sección { tamaño de fuente: 32px; }</style>
-
+<style scoped>
+section {
+  @extend .markdown-body;
+  font-size: 32px;
+  justify-content: top;
+ }
+</style>
 ### Funcionamiento de los sistemas de razonamiento impreciso (II)
 
 - _Evaluación de las reglas_:
@@ -470,11 +393,14 @@ h1, h2, h3, h4, h5, h6, p {
 
 ---
 
-<style scoped>sección { tamaño de fuente: 30px; }</style>
-
+<style scoped>
+section {
+  @extend .markdown-body;
+  font-size: 34px;
+  justify-content: top;
+ }
+</style>
 ### Funcionamiento de los sistemas de razonamiento impreciso (III)
-
-![fondo derecho:35% ajuste](../images/defuzzy.png)
 
 - _Desfuzzyficación_:
   - Conversión de los datos de salida difusos a valores precisos.
@@ -487,7 +413,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 ### Funciones de relevancia (I)
 
-![w:800](../images/funciones_de_membresia.png)
+![w:800](../../UD02/assets/membership_fuctions.png)
 
 - Las más utilizadas son las **funciones trapezoidales** y las **funciones triangulares**.
 - Las sinusoidales son útiles para representar **periodos**.
@@ -495,8 +421,13 @@ h1, h2, h3, h4, h5, h6, p {
 
 ---
 
-<style scoped>sección { tamaño de fuente: 28px; }</style>
-
+<style scoped>
+section {
+  @extend .markdown-body;
+  font-size: 26px;
+  justify-content: top;
+ }
+</style>
 ### Ejemplo: Propinas (I)
 
 #### Variables d'entrada
@@ -512,7 +443,7 @@ Utilizaremos funciones triangulares para representar las variables de entrada y 
   - **Medio**: $[0, 10]$
   - **Todos**: $[5, 10]$
 
-![fondo derecho:33% de ajuste](../images/plot_tipping_problem_newapi_2.png)
+![bg right:33% fit](../../UD02/assets/plot_tipping_problem_newapi_2.png)
 
 ---
 
@@ -525,12 +456,17 @@ Utilizaremos funciones triangulares para representar las variables de entrada y 
   - **Media**: $[0, 25]$
   - **Alta**: $[13, 25]$
 
-![fondo derecho:33% de ajuste](../images/plot_tipping_problem_newapi_3.png)
+![bg right:35% fit](../../UD02/assets/plot_tipping_problem_newapi_3.png)
 
 ---
 
-<style scoped>sección { tamaño de fuente: 33px; }</style>
-
+<style scoped>
+section {
+  @extend .markdown-body;
+  font-size: 32px;
+  justify-content: top;
+ }
+</style>
 ### Ejemplo: Propinas (III)
 
 #### Reglas
@@ -539,7 +475,7 @@ Utilizaremos funciones triangulares para representar las variables de entrada y 
 - **IF** (Calidad del servicio es **media**) **THEN** (Propina es **media**)
 - **IF** (Calidad del servicio es **alta** o Comida es **alt**) **THEN** (Propina es **alta**)
 
-![fondo derecho: ajuste del 40 %](../images/plot_tipping_problem_newapi_4.png)
+![bg right:40% fit](../../UD02/assets/plot_tipping_problem_newapi_4.png)
 
 ---
 
@@ -549,10 +485,9 @@ Utilizaremos funciones triangulares para representar las variables de entrada y 
 
 - Calidad del servicio: **9.8**
 - Calidad de la comida: **6.5**
-- Tasa de matrícula: **20,24%**
+- Tasa de matrícula: **19,24%**
 
-
-![bg right fit](../images/plot_tipping_problem_newapi_5.png)
+![bg right fit](../../UD02/assets/plot_tipping_problem_newapi_5.png)
 
 <!-- Put this script at the end of Markdown file. -->
 <script type="module">
