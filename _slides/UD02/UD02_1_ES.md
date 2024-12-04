@@ -40,7 +40,7 @@ section {
 ![h:300 center](../../UD02/assets/cover.png)
 # **UD02: Sistemas Basados en Reglas**
 #### Modelos de Inteligencia Artificial
-###### version: 2024-11-27
+###### version: 2024-12-05
 ___
 <!-- footer: d.martinezpena@edu.gva.es -->
 <!-- header: Modelos de Inteligencia Artificial 24-25 (UD01_1)-->
@@ -297,7 +297,7 @@ section {
 - La lógica difusa permite trabajar con valores **continuos**.
   - Un enunciado puede ser **cierto** _y_ **falso** en un grado **parcial**.
 - Los valores de verdad son **números reales** en el intervalo $[0, 1]$.
-  - $0: Falso$, $1: Cierto$, $0.5:$ $Cert$ en $50\%$
+  - $0: Falso$, $1: Cierto$, $0.5:$ $Cierto$ al $50\%$
 - La pertenencia de un elemento a un conjunto vendrá dada por una **función de pertenencia**.
   - $\mu_A(x)$: Grado de pertenencia de $x$ al conjunto $A$.
 
@@ -341,7 +341,7 @@ section {
 - **Valores lingüísticos**: Valores que puede tomar una variable lingüística.
   - Ejemplo: $Frio, Calor$
 - **Función de pertenencia**: Función que asigna a cada valor de una variable lingüística un grado de pertenencia a un valor lingüístico.
-  - Ejemplo: $Temperatura = 27^oC \rightarrow Calor = 0,8,\; Combustible\,Calor = 0,2$
+  - Ejemplo: $Temperatura = 27^oC \rightarrow Calor = 0,8\, Mucho Calor = 0,2$
 
 ---
 
