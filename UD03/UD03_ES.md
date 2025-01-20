@@ -143,7 +143,7 @@ Se centra en el desarrollo de sistemas capaces de traducir automáticamente text
 
 Algunos modelos (normalmente de tamaño considerable) han sido entrenados de tal forma que las palabras son etiquetadas de manera que aludan a conceptos semánticos.
 
-Por ejemplo, un perro es un mamífero y a su vez es un animal. Un etiquetado correcto situará en lugares más próximos entre sí a un perro y a un gato (dos mamíferos) que a un perro y a un salmón. De la misma manera una manzana es una fruta, que a su vez es comida. En buena lógica es más «parecido» semánticamente a una manzana una naranja que una zanca de pollo, aunque todo sea comida.
+Por ejemplo, un perro es un mamífero y a su vez es un animal. Un etiquetado correcto situará en lugares más próximos entre sí a un perro y a un gato (dos mamíferos) que a un perro y a un salmón. De la misma manera una manzana es una fruta, que a su vez es comida. En buena lógica es más «parecido» semánticamente a una manzana una naranja que una pata de pollo, aunque todo sea comida.
 
 Mediante técnicas de vectorización y de cálculo del coseno es posible analizar dos textos y decir el «parecido» que tengan entre sí, aunque lógicamente esta apreciación de parecido es subjetiva y depende del set de datos que haya sido empleado para llevar a cabo el entrenamiento.
 
@@ -193,7 +193,7 @@ Una de las limitaciones mayores alrededor del procesamiento de lenguaje natural 
 
 ## Desambiguación
 
-La ambigüedad inherente al LN es uno de los problemas presentes en todas fases del procesamiento de la lengua.
+La ambigüedad inherente al PLN es uno de los problemas presentes en todas fases del procesamiento de la lengua.
 
 Ejemplos:
 
@@ -330,7 +330,7 @@ El abordaje de esta labor es sencillo:
    - Se localizan los tokens correspondientes a verbos de acción (cocer, batir).
    - Se localizan los tokens correspondientes a valores numéricos.
    - Se va haciendo agregación sintagmática.
-   - Se activan las salidas en una GPIO (véase Unidad 4).
+   - Se activan las salidas en una GPIO.
 
 > ## Puede emplear los contenedores de nVidia para, mediante Docker, emplear NeMo sobre un sistema operativo Ubuntu con gran facilidad.
 >
