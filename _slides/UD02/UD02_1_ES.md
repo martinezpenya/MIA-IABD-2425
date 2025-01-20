@@ -43,7 +43,7 @@ section {
 ###### version: 2024-12-05
 ___
 <!-- footer: d.martinezpena@edu.gva.es -->
-<!-- header: Modelos de Inteligencia Artificial 24-25 (UD01_1)-->
+<!-- header: Modelos de Inteligencia Artificial 24-25 (UD02_1)-->
 # ¿Qué veremos?
 1. IA Simbolica
 2. Sistemas Expertos
