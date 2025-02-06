@@ -212,7 +212,7 @@ A la hora de implementar un sistema experto, resulta conveniente tener en cuenta
 
 - En primer lugar, un tipo de conocimiento muy utilizado es el denominado conocimiento procedimental. Este conocimiento se refiere a la realización de alguna tarea que se lleva a cabo con el fin de, por ejemplo, mejorar el rendimiento de un sistema o de un proceso. Así, siempre que se disponga de conocimiento relativo a cómo resolver un problema paso a paso, dicho conocimiento se denominará procedimental.
 - Existe también otro conocimiento que es del tipo objetivo y que se encuentra en los libros y manuales de una especialidad. Es el llamado conocimiento factual. Si bien es accesible por otras vías, resulta de utilidad implementarlo en un sistema experto dada la rapidez de acceso al mismo.
-- Además, también hay otra clase que es la propia de cada experto, que noestá completamente basada en hechos objetivos y que no se encuentra enlos libros de texto. Este conocimiento se denomina conocimiento heurístico y su implementación en sistemas expertos resulta muy adecuada. Si se alimenta a un sistema experto con conocimientos de tipo heurístico, se puede conseguir que, por ejemplo, personal destinado a la realización de una tarea y con escasa experiencia en la misma tome decisiones similares a las que elegiría un experto.
+- Además, también hay otra clase que es la propia de cada experto, que no está completamente basada en hechos objetivos y que no se encuentra en los libros de texto. Este conocimiento se denomina conocimiento heurístico y su implementación en sistemas expertos resulta muy adecuada. Si se alimenta a un sistema experto con conocimientos de tipo heurístico, se puede conseguir que, por ejemplo, personal destinado a la realización de una tarea y con escasa experiencia en la misma tome decisiones similares a las que elegiría un experto.
 - La representación del conocimiento en un sistema experto por reglas del tipo SI ... ENTONCES contribuye a hacer más sencilla su explicación pues son fácilmente entendibles tanto por los programadores del sistema como por sus usuarios. Nótese también que la base de datos de conocimiento contiene la información que empleará el motor de inferencia.
 
 ### Base de hechos o datos
@@ -329,7 +329,7 @@ Para obtener conclusiones, utilizaremos los diferentes tipos de reglas y estrate
 * La lógica difusa facilita la **representación del conocimiento humano**.
   * Los humanos no razonamos en términos binarios.
   * Los humanos no tenemos un conocimiento preciso ni completo.
-* Conceptos como $$húmedo$$ o $$fred$$ son difíciles de definir con precisión.
+* Conceptos como $$húmedo$$ o $$frio$$ son difíciles de definir con precisión.
   * La lógica difusa nos permite definirlos con **funciones de relevancia**.
   * El poder trabajar con estos conceptos facilita la creación de dispositivos como secadores o termostatos.
     * _"Si la temperatura es fría, entonces enciende la calefacción"_
